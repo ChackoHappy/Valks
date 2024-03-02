@@ -1,4 +1,5 @@
 import { Router } from "next/router";
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Header( {name} : {name:any} ) {
   return (
