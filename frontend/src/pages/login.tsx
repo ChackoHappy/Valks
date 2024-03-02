@@ -4,6 +4,10 @@ export default function Login() {
     const router = useRouter();
 
 	const onSubmit = () => {
+		if(localStorage.getItem("test") == null){
+			localStorage.setItem("test", JSON.stringify(false));
+		}
+
 		const temp: any = localStorage.getItem("test");
 		const tookTest: boolean = JSON.parse(temp);
 

@@ -7,6 +7,10 @@ import { useEffect } from 'react';
 export default function Home() {
 
 	useEffect(() => {
+		if(localStorage.getItem("loggedIn") == null){
+			localStorage.setItem("loggedIn", JSON.stringify(false));
+		}
+		
 		const temp: any = localStorage.getItem("loggedIn");
 		const loggedIn: boolean = JSON.parse(temp);
 
