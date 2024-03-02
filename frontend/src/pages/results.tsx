@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useState } from 'react';
 import Head from 'next/head';
 
+import Header from "@/components/Header";
+
 import LearningType from "@/components/LearningType";
 
 export default function Results() {
@@ -15,6 +17,7 @@ export default function Results() {
   return (
     <main>
       <div className="container">
+			<Header name={"Learning Type Results"} />
         <h1 className="text-center mt-5 mb-4">Congratulations! Here are your learning type results.	</h1>
         <div className="d-flex flex-column align-items-center">
           {learningTypes.map((item) => (

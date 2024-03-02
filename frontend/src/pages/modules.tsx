@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from 'react';
 
 import Module from "@/components/Module";
+import Header from "@/components/Header";
 
 export default function Modules() {
 	const [classes, setClasses] = useState([
@@ -20,7 +21,8 @@ export default function Modules() {
 
   return (
     <main>
-      <div>
+      <div className="container">
+			<Header name={"Modules"} />
         {classes.map((item) => (
           <Module key={item.id} id={item.id} name={item.name} date={item.date} keyPoints={item.keyPoints}/>
         ))}
