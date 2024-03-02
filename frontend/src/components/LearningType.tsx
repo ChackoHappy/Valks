@@ -19,8 +19,13 @@ export default function LearningType({ name, details, percentage, color }: Learn
     backgroundColor: color || "white"
   };
 
+	const handleSubmit = () => {
+		localStorage.setItem("test", JSON.stringify(true));
+		Router.push("/home")
+	}
+
   return (
-    <div onClick={() => Router.push("/home")} className="card p-3 rounded mb-3 mt-3" style={cardStyle}>
+    <div onClick={handleSubmit} className="card p-3 rounded mb-3 mt-3" style={cardStyle}>
       <div className="row">
         <div className="col-8">
           <h5 className="card-title">{name}</h5>

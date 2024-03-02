@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from 'react';
-import styles from './Test.module.css'; // Import CSS module for styling
+import styles from './Test.module.css';
 import Router from "next/router";
 import Header from "@/components/Header";
 
@@ -14,8 +14,7 @@ export default function Test() {
   };
 
   const handleSubmit = () => {
-    // Handle form submission here
-    console.log("Answers:", answers);
+    Router.push("/results");
   };
 
   const questions = [
@@ -61,7 +60,7 @@ export default function Test() {
             </div>
           </div>
         ))}
-        <button onClick={() => Router.push("/results")} className={styles.submitButton}>
+        <button onClick={handleSubmit} className={styles.submitButton}>
           Submit
         </button>
       </div>
