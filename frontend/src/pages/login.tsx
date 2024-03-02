@@ -6,7 +6,7 @@ export default function Login() {
     <main className='align-self-center justify-content-center d-flex'>
         <div className="container text-center" style={{maxWidth: '600px'}}>
             <div>
-                <img className="mb-4 mx-auto" src="2.png" alt="" width="300" height="300" />
+                <img className="mb-4 mx-auto mt-3" src="2.png" alt="" width="200" height="200" />
                 <div className="mb-3">
                     <label className="form-label">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
