@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Module.css';
+import Router from "next/router";
 
 interface ModuleProps {
   id: number;
@@ -12,12 +13,17 @@ interface ModuleProps {
 export default function Module({ id, name, date, keyPoints }: ModuleProps) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const toggleCollapse = () => {
+  const toggleCollapse = (event: React.MouseEvent<HTMLDivElement>) => {
+		event.stopPropagation();
     setIsCollapsed(!isCollapsed);
   };
 
+	const onSubmit = () => {
+		Router.push("/content");
+	}
+
   return (
-    <div className="module-container p-2">
+    <div className="module-container p-2" onClick={onSubmit}>
       <div className="card p-3 rounded">
         <div className="d-flex justify-content-between align-items-center">
           <div>{id} - {name} ({date.toISOString().split("T")[0]})</div>
