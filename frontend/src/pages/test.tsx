@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from 'react';
 import styles from './Test.module.css'; // Import CSS module for styling
 import Router from "next/router";
+import Header from "@/components/Header";
 
 export default function Test() {
   const [answers, setAnswers] = useState<string[]>([]);
@@ -41,7 +42,8 @@ export default function Test() {
   ];
 
   return (
-    <main className={styles.container}>
+    <main className="container">
+      <Header name={"Test"} />
       <div className={styles.content}>
 			<h1 className={styles.title}>Learning Type Quiz</h1>
         {questions.map((question, index) => (
