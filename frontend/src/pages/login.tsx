@@ -23,9 +23,10 @@ export default function Login() {
   return (
     <main className='align-self-center justify-content-center d-flex'>
         <div className="container text-center" style={{maxWidth: '600px'}}>
-            <div>
+            <div className='sp'>
                 <img className="mb-4 mx-auto mt-3" src="2.png" alt="" width="200" height="200" />
-                <div className="mb-3">
+                <br /><br /><br /><br />
+                <div className="mb-3 p">
                     <label className="form-label">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>
@@ -33,7 +34,7 @@ export default function Login() {
                     <label className="form-label">Password</label>
                     <input type="password" className="form-control" />
                 </div>
-                <button className="btn btn-primary" onClick={onSubmit}>Submit</button>
+                <button className="btn btn-primary" onClick={onSubmit}>Sign In</button>
             </div>
         </div>
     </main>
