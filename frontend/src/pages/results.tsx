@@ -19,7 +19,7 @@ export default function Results() {
       <div className="container">
 			<Header name={"Learning Type Results"} />
         <h1 className="text-center mt-5 mb-4">Congratulations! Here are your learning type results.	</h1>
-        <h1 className="text-center mt-5 mb-4">Please select the learning type you are most comfortable with. </h1>
+        <h4 className="text-center mt-5 mb-4">(Please select the learning style with your highest score but feel free to experiment with other learning styles.)</h4>
         <div className="d-flex flex-column align-items-center">
           {learningTypes.map((item) => (
             <LearningType key={item.name} name={item.name} details={item.details} percentage={item.percentage} color={item.color}/>
