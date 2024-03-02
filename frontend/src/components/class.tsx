@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Link from 'next/link';
 import {useRouter} from 'next/router';
 
-export default function Class( {classID} : {classID:any} ) {
+interface ClassProps {
+    name: string;
+    classID: string;
+}
+
+export default function Class( {name, classID} : ClassProps ) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const router = useRouter();
 
@@ -18,10 +22,10 @@ export default function Class( {classID} : {classID:any} ) {
     return (
       <main>
         <div onClick={() => router.push({pathname: '/modules'})}>
-            <img src={"/" + classID + ".jpg"} alt={classID} width={100} />
+            <img src={"/" + classID + ".jpg"} alt={classID} width={150} height={175}/>
             <div className={'row flex-lg-row align-items-center g-5 py-5'}>
                 <div className={'col-md-5'}>
-                    <p>Python</p>
+                    <p>{name}</p>
                 </div>
                 <div className={'col-md-7'}>
                     <button onClick={toggleDropdown} className='btn btn-light'>

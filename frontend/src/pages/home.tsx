@@ -5,9 +5,17 @@ export default function Home() {
   return (
     <main className="container">
       <Header name={"Home"} />
-      <Class classID={"python"}/>
-      <Class classID={"cplusplus"}/>
-      <Class classID={"java"}/>
+      <div className="row">
+        <div className="col-md-4">
+          <Class classID={"python"} name={"Python"}/>
+        </div>
+        <div className="col-md-4">
+          <Class name={"C++"} classID={"cplusplus"}/>
+        </div>
+        <div className="col-md-4">
+          <Class name={"Java"} classID={"java"}/>
+        </div>
+      </div>
     </main>
   );
 }
