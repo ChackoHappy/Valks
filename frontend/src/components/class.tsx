@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import styles from "./class.module.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Class( {classID} : {classID:any} ) {
-    const options = ["Set Learning Type"]
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
     const handleOptionClick = (option: string) => {
-        setSelectedOption(option);
         setIsOpen(false);
     };
     
@@ -19,10 +16,12 @@ export default function Class( {classID} : {classID:any} ) {
       <main>
         <div>
             <img src={"/" + classID + ".jpg"} alt={classID} width={100} />
-            <div>
-                <p>Python</p>
-                <div>
-                    <button onClick={toggleDropdown}>
+            <div className={'row flex-lg-row align-items-center g-5 py-5'}>
+                <div className={'col-md-5'}>
+                    <p>Python</p>
+                </div>
+                <div className={'col-md-7'}>
+                    <button onClick={toggleDropdown} className='btn btn-light'>
                         {"..."}
                     </button>
                     {isOpen && (
@@ -32,7 +31,7 @@ export default function Class( {classID} : {classID:any} ) {
                         </button>
                         </div>
                     )}
-                    </div>
+                </div>
             </div>
         </div>
       </main>
