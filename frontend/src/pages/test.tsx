@@ -43,9 +43,8 @@ export default function Test() {
 
   return (
     <main className="container">
-      <Header name={"Test"} />
+      <Header name={"Learning Type Quiz"} />
       <div className={styles.content}>
-			<h1 className={styles.title}>Learning Type Quiz</h1>
         {questions.map((question, index) => (
           <div key={index} className={styles.question}>
             <p>{question.question}</p>

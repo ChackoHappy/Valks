@@ -1,11 +1,11 @@
-import { Router } from "next/router";
+import Router from "next/router";
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Header( {name} : {name:any} ) {
   return (
     <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <div className="col-md-3 mb-2 mb-md-0">
-            <a href="/" className="d-inline-flex link-body-emphasis text-decoration-none">
+        <div className="col-md-3 mb-2 mb-md-0" onClick={() => Router.push("/home")}>
+            <a className="d-inline-flex link-body-emphasis text-decoration-none">
             <img className="mb-4 mx-auto" src="2.png" alt="" width="60" height="50" />
             </a>
         </div>
