@@ -1,13 +1,13 @@
-
-import styles from "./page.module.css";
+"use client"
+import {useRouter} from "next/navigation";
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Home() {
+  const router = useRouter()
 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        
+    <main>
+      <div>
       </div>
     </main>
   );
