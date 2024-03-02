@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Link from 'next/link';
-import Router from 'next/router';
+import {useRouter} from 'next/router';
 
 export default function Class( {classID} : {classID:any} ) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const router = useRouter();
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -16,7 +17,7 @@ export default function Class( {classID} : {classID:any} ) {
         
     return (
       <main>
-        <div onClick={() => Router.push({pathname: '/modules'})}>
+        <div onClick={() => router.push({pathname: '/modules'})}>
             <img src={"/" + classID + ".jpg"} alt={classID} width={100} />
             <div className={'row flex-lg-row align-items-center g-5 py-5'}>
                 <div className={'col-md-5'}>
