@@ -15,7 +15,7 @@ export default function Modules() {
     { id: 8, name: "Plant Biology", date: new Date("2024-04-12"), keyPoints: ["Plant structure", "Photosynthesis"] },
     { id: 9, name: "Animal Behavior", date: new Date("2024-04-19"), keyPoints: ["Instinctive behaviors", "Social behaviors"] },
     { id: 10, name: "Biotechnology and Bioengineering", date: new Date("2024-04-26"), keyPoints: ["Applications of biotechnology", "Genetic engineering"] },
-]);
+	]);
 
 
   return (
