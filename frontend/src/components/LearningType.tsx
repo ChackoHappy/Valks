@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useState } from 'react';
 
+import Router from "next/router";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface LearningTypeProps {
@@ -18,7 +20,7 @@ export default function LearningType({ name, details, percentage, color }: Learn
   };
 
   return (
-    <div className="card p-3 rounded mb-3 mt-3" style={cardStyle}>
+    <div onClick={() => Router.push("/home")} className="card p-3 rounded mb-3 mt-3" style={cardStyle}>
       <div className="row">
         <div className="col-8">
           <h5 className="card-title">{name}</h5>
